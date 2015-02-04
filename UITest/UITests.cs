@@ -28,9 +28,9 @@ namespace GoGetFitTests
         [TestMethod]
         public void TestZeroState()
         {
-            Button AddWorkoutButton = window.Get<Button>("AddWorkoutButton");
+            Button addButton = window.Get<Button>("AddWorkoutButton");
 
-            Assert.IsTrue(AddWorkoutButton.Enabled);
+            Assert.IsTrue(addButton.Enabled);
         }
 
         [ClassCleanup]

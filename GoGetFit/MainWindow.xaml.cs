@@ -25,5 +25,10 @@ namespace GoGetFit
             InitializeComponent();
         }
 
+        private void AddWorkoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

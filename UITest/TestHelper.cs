@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using GoGetFit.Model;
 
 
 namespace GoGetFitTests
 {
-    public class TestHelper
+    public class TestHelper 
     {
 
         public void AndIShouldSeeXWorkouts(int p)

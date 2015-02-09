@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C707DA17-2750-4AA4-AF2C-975B6E2AAC52}</ProjectGuid>
+    <ProjectGuid>{974C1A5C-AEEB-4633-8B70-DC770B10DF05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UITest</RootNamespace>
-    <AssemblyName>UITest</AssemblyName>
+    <RootNamespace>StoryTests</RootNamespace>
+    <AssemblyName>StoryTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,16 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="TestStack.BDDfy">
-      <HintPath>..\packages\TestStack.BDDfy.4.1.0\lib\NET40\TestStack.BDDfy.dll</HintPath>
-    </Reference>
-    <Reference Include="TestStack.White">
-      <HintPath>..\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -59,13 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TestHelper.cs" />
-    <Compile Include="UITests.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoryTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

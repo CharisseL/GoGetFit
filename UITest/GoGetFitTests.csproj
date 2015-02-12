@@ -59,10 +59,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DeleteWorkoutTest.cs" />
+    <Compile Include="EditWorkoutTest.cs" />
     <Compile Include="TestHelper.cs" />
     <Compile Include="UITests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoryTests.cs" />
+    <Compile Include="CreateWorkoutTest.cs" />
+    <Compile Include="WorkoutModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

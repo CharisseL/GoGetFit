@@ -8,9 +8,14 @@ namespace GoGetFit.Model
 {
     public class Workout
     {
+        public string Date;
+        public string Name;
+
         public Workout(string WorkoutName, string WorkoutDate)
         {
-            throw new NotImplementedException();
+            this.Name = WorkoutName;
+            this.Date = WorkoutDate;
         }
+       
     }
 }

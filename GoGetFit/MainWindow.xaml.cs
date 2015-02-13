@@ -22,14 +22,14 @@ namespace GoGetFit
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Workout> Workouts;
+      
 
             public MainWindow()
             {
-                Workouts = new ObservableCollection<Workout>();
-                Workouts.Add(new Workout("Red Trail Run", "05/03/15"));
+                new Workout("Blue Trail Run", "05/03/15");
+               
                 InitializeComponent();
-                WorkoutList.DataContext = Workouts;
+                WorkoutList.DataContext = Workout.Workouts;
         }
 
         private void AddWorkoutButton_Click(object sender, RoutedEventArgs e)

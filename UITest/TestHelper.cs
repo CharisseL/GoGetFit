@@ -76,6 +76,21 @@ namespace GoGetFitTests
             throw new NotImplementedException();
         }
 
+        public void WhenIEditWorkoutWith(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GivenThereAreXWorkouts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GivenThereAreXWorkouts(int p)
+        {
+            throw new NotImplementedException();
+        }
+
 
 
     }

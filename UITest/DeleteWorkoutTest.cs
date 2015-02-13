@@ -2,14 +2,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GoGetFitTests;
 
-namespace GoGetFitTest
+namespace GoGetFitTests
 {
     [TestClass]
     public class DeleteWorkoutTest : TestHelper
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ScenarioDeleteWorkout()
         {
+            GivenThereAreXWorkouts(1);
+            WhenIClick("Delete Workout");
+            AndIShouldSeeXWorkouts(0);
+            AndTheButtonShouldBeEnabled("Add Workout");
+            WhenIClick("Add Workout");
+            ThenIShouldSeeWorkoutForm();
+            AndTheButtonShouldBeDisabled("Add Workout");
+
         }
     }
 }

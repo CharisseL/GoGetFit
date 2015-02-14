@@ -22,8 +22,7 @@ namespace GoGetFitTests
             AndIShouldSeeXWorkouts(1);
             AndTheButtonShouldBeEnabled("Edit");
         }
-
-       
+ 
         [TestMethod]
         public void ScenarioCancelWorkoutEdit()
         {

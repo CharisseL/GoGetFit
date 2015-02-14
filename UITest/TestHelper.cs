@@ -26,9 +26,11 @@ namespace GoGetFitTests
             window = application.GetWindow("MainWindow", InitializeOption.NoCache);
         }
 
-        public void AndIShouldSeeXWorkouts(int p)
+        public void AndIShouldSeeXWorkouts(int expected)
         {
-            throw new NotImplementedException();
+            Assert.IsNotNull(window);
+            ListBox workouts = window.Get<ListBox>("WorkoutList");
+            Assert.AreEqual(expected, workouts.Items.Count);
         }
 
         public void ThenIShouldNotSeeWorkoutForm()
@@ -81,16 +83,31 @@ namespace GoGetFitTests
             throw new NotImplementedException();
         }
 
-        public void GivenThereAreXWorkouts()
-        {
-            throw new NotImplementedException();
-        }
-
         public void GivenThereAreXWorkouts(int p)
         {
             throw new NotImplementedException();
         }
 
+        public void AndIShouldSeeAWorkoutFor(string p1, string p2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ThenIShouldSeeXEvents(int p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GivenTheseWorkouts(Workout workout1, Workout workout2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void CleanUp()
+        {
+            window.Close();
+            application.Close();
+        }
 
 
     }

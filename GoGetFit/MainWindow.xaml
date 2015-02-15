@@ -43,5 +43,10 @@
         <Label Content="  GoGetFit&#xD;&#xA;&#xD;&#xA;Month-At-A-Glance" HorizontalAlignment="Left" Height="68" Margin="4,24,0,0" VerticalAlignment="Top" Width="334" FontFamily="Segoe WP Black" FontSize="30"/>
         <Label Content="Month At-A-Glance" HorizontalAlignment="Left" Height="33" Margin="25,67,0,0" VerticalAlignment="Top" Width="233" FontSize="16"/>
         <ListBox HorizontalAlignment="Left" Height="209" Margin="398,127,0,0" VerticalAlignment="Top" Width="255" Name="WorkoutList" ItemsSource="{Binding NotifyOnSourceUpdated=True}"/>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <TextBox Text="{Binding Name}"></TextBox>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
     </Grid>
 </Window>

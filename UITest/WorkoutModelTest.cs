@@ -11,7 +11,7 @@ namespace GoGetFitTests
         public void CreatingAWorkoutStoresItInWorkouts()
         {
             Workout trailRun = new Workout("Blue Trail Run", "02/14/15");
-            //CollectionAssert.Contains(Workout.Workouts, trailRun);
+            CollectionAssert.Contains(Workout.Workouts, trailRun);
         }
         [TestMethod]
         public void CreatingAWorkoutStoresItsProperties()

@@ -74,6 +74,7 @@
     <Compile Include="CreateWorkoutTest.cs" />
     <Compile Include="ViewingWorkoutsTest.cs" />
     <Compile Include="WorkoutModelTest.cs" />
+    <Compile Include="WorkoutRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

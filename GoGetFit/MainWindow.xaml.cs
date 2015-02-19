@@ -15,7 +15,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GoGetFit.Model;
 using GoGetFit;
-using GoGetFit.WorkoutContext;
 
 namespace GoGetFit
 {
@@ -25,15 +24,15 @@ namespace GoGetFit
         public WorkoutContext _dbContext;
         public MainWindow()
             {
-                using(_dbContext = new WorkoutContext())
+                using(var _dbContext = new WorkoutContext())
                 {
                     _dbContext.Workouts.Add(new Workout("Boxing Class", "06/30/2015"));
                     _dbContext.Workouts.Add(new Workout("Yoga", "11/29/2015"));
                     _dbContext.SaveChanges();
-                    Workouts= new ObservableCollection<Workout>();
+                    //Workouts= new ObservableCollection<Workout>();
                 }                 
                 InitializeComponent();
-                WorkoutList.DataContext = _dbContext.Workouts.Local;
+                //WorkoutList.DataContext = _dbContext.Workouts.Local;
         }
 
             private void AddWorkoutButton_Click(object sender, RoutedEventArgs e)

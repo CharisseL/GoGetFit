@@ -10,14 +10,13 @@ namespace GoGetFit.Repository
 {
     public interface IWorkoutRepository
     {
-        int GetWorkoutDays();
-        void Add();
-        void Delete();
-        void Update();
+        int GetWorkoutCount();
+        void Add(Workout E);
+        void Delete(Workout E);
         void Clear();
-        IQueryable<Workout> PastWorkouts();
-        int CalculateMonth();
-        IQueryable<Workout> All();
+        List<Workout> PastWorkouts();
+        int CalculateMonth(Workout E);
+        List<Workout> All();
         Workout GetById(int id);
         Workout GetByDate(string date);
         IQueryable<Workout> SearchFor(Expression<Func<Workout, bool>> predicate);

@@ -7,12 +7,12 @@ namespace GoGetFitTests
     [TestClass]
     public class WorkoutModelTest
     {
-        [TestMethod]
+        /*[TestMethod]
         public void CreatingAWorkoutStoresItInWorkouts()
         {
             Workout trailRun = new Workout("Blue Trail Run", "02/14/15");
             CollectionAssert.Contains(Workout.Workouts, trailRun);
-        }
+        }*/
         [TestMethod]
         public void CreatingAWorkoutStoresItsProperties()
         {

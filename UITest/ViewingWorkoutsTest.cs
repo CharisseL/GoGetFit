@@ -26,6 +26,7 @@ namespace GoGetFitTests
                 new Workout("Blue Trail Run", "02/14/15"),
                 new Workout("Red Trail Run", "05/03/15")
                 );
+
             ThenIShouldSeeXEvents(2);
             AndIShouldSeeAWorkoutFor("Blue Trail Run", "02/14/15");
             AndIShouldSeeAWorkoutFor("Red Trail Run", "05/03/15");

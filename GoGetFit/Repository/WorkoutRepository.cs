@@ -15,8 +15,14 @@ namespace GoGetFit.Repository
         public WorkoutRepository()
         {
             _dbContext = new WorkoutContext();
+            _dbContext.Workouts.Load();
+
         }
         
+        public WorkoutContext Context()
+        {
+            return _dbContext;
+        }
         public DbSet<Model.Workout> GetDbSet()
         {
             return _dbContext.Workouts;
@@ -25,13 +31,13 @@ namespace GoGetFit.Repository
         
         public int GetWorkoutCount()
         {
-            throw new NotImplementedException();
+            return _dbContext.Workouts.Count<Model.Workout>();
         }
 
         public void Add(Model.Workout E)
         {
-            throw new NotImplementedException();
-            //_dbContext.SaveChanges();
+            _dbContext.Workouts.Add(E);
+            _dbContext.SaveChanges();
         }
 
         public void Delete(Model.Workout E)
@@ -43,7 +49,9 @@ namespace GoGetFit.Repository
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            var a = this.All();
+            _dbContext.Workouts.RemoveRange(a);
+            _dbContext.SaveChanges();
         }
 
         public List<Model.Workout> PastWorkouts()
@@ -58,8 +66,11 @@ namespace GoGetFit.Repository
 
         public List<Model.Workout> All()
         {
-            throw new NotImplementedException();
+            var worklist = from Workout in _dbContext.Workouts
+                           select Workout;
+            return worklist.ToList<Model.Workout>();
         }
+
 
         public Model.Workout GetById(int id)
         {
@@ -71,7 +82,10 @@ namespace GoGetFit.Repository
 
         public Model.Workout GetByDate(string date)
         {
-            throw new NotImplementedException();
+            var query = from Workout in _dbContext.Workouts
+                        where Workout.Date == date
+                        select Workout;
+            return query.First<Model.Workout>();
         }
 
         public IQueryable<Model.Workout> SearchFor(System.Linq.Expressions.Expression<Func<Model.Workout, bool>> predicate)

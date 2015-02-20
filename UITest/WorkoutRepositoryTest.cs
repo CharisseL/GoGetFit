@@ -11,12 +11,33 @@ namespace GoGitFitTests
     [TestClass]
     public class WorkoutRepositoryTest
     {
+        private static WorkoutRepository repo;
+        [ClassInitialize]
+        public static void SetUp(TestContext _context)
+        {
+            repo = new WorkoutRepository();
+            repo.Clear();
+        }
+
+        [ClassCleanup]
+        public static void CleanUp()
+        {
+            repo.Clear();
+            repo.Dispose();
+        }
+
+        [TestCleanup]
+        public void ClearDatabase()
+        {
+            repo.Clear();
+        }
+
         [TestMethod]
         public void TestAddToDatabase()
         {
-            WorkoutRepository repo = new WorkoutRepository();
-            repo.GetDbSet().Add(new Workout("Daily Burn", "12/08/2015"));
-            Assert.AreEqual(1, repo.GetDbSet().Local.Count);
+            Assert.AreEqual(0, repo.GetWorkoutCount());
+            repo.Add(new Workout("Red Trail Run", "05/03/2015"));
+            Assert.AreEqual(1, repo.GetWorkoutCount());
         }
 
         [TestMethod]
@@ -29,7 +50,7 @@ namespace GoGitFitTests
             list.AddLast(new Workout("Blue Trail Run", "02/14/2015"));
             repo.Add(new Workout("Red Trail Run", "05/03/2015"));
             repo.Add(new Workout("Blue Trail Run", "02/14/2015"));
-            Assert.AreEqual(list, repo);
+            Assert.AreEqual(2, repo.GetWorkoutCount());
         }
 
         [TestMethod]

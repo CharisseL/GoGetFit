@@ -66,9 +66,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WorkoutForm.xaml.cs">
+      <DependentUpon>WorkoutForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repository\IWorkoutRepository.cs" />
     <Compile Include="Repository\WorkoutRepository.cs" />
     <Compile Include="WorkoutContext.cs" />
+    <Page Include="WorkoutForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

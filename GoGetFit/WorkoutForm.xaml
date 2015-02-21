@@ -1,0 +1,14 @@
+﻿<Window x:Class="GoGetFit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="725">
+    <Grid Margin="-1,3,1,-3">
+        <Button x:Name ="AddWorkout" Content="Add Workout" HorizontalAlignment="Left" Margin="567,399,0,0" VerticalAlignment="Top" Width="90" Height="35" FontFamily="Segoe UI Black" Click="AddWorkoutButton_Click"/>
+        <Label Content="  GoGetFit&#xD;&#xA;&#xD;&#xA;Month-At-A-Glance" HorizontalAlignment="Left" Height="68" Margin="4,24,0,0" VerticalAlignment="Top" Width="334" FontFamily="Segoe WP Black" FontSize="30"/>
+        <Label Content="Today's Workout" HorizontalAlignment="Left" Height="33" Margin="25,67,0,0" VerticalAlignment="Top" Width="233" FontSize="16"/>
+        <DatePicker HorizontalAlignment="Left" Margin="45,131,0,0" VerticalAlignment="Top" Height="40" Width="166"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,206,0,0" TextWrapping="Wrap" Text="Workout Type" VerticalAlignment="Top" Width="185" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="248,206,0,0" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" Width="165"/>
+        <TextBox HorizontalAlignment="Left" Height="84" Margin="45,275,0,0" TextWrapping="Wrap" Text="Description (optional)" VerticalAlignment="Top" Width="368"/>
+    </Grid>
+</Window>

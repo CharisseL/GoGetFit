@@ -28,11 +28,12 @@ namespace GoGetFit
         public MainWindow()
             {
                InitializeComponent();
-                WorkoutList.DataContext = repo.Context().Workouts.Local;
+                WorkoutList.DataContext = repo.GetAllWorkouts();
             }                 
             private void AddWorkoutButton_Click(object sender, RoutedEventArgs e)
             {
-                repo.Add(new Workout("Test", "07/04/2015"));
+                var viewWorkoutForm = new WorkoutForm();
+                viewWorkoutForm.Show();
             }
 
       

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GoGetFit.Model;
+using GoGetFit.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace GoGetFit
 {
     /// <summary>
@@ -19,9 +22,24 @@ namespace GoGetFit
     /// </summary>
     public partial class WorkoutForm : Window
     {
+        private WorkoutRepository repo;
+        private Workout wrkout;
         public WorkoutForm()
         {
             InitializeComponent();
+         }    
+       
+        private void AddWorkout_Click(object sender, RoutedEventArgs e)
+        {
+            /*repo = new WorkoutRepository();
+            string workout_date = Workout_Date.Text;
+            string workout_name = Workout_Name.Text;
+            string workout_location = Workout_Location.Text;
+            wrkout = new Workout(workout_date, workout_name, workout_location);
+            repo.Add(wrkout);
+            Workout_Date.Text = "";
+            Workout_Name.Text = "";
+            Workout_Location.Text = "";*/
         }
     }
 }

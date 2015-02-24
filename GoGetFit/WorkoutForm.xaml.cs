@@ -22,15 +22,19 @@ namespace GoGetFit
     /// </summary>
     public partial class WorkoutForm : Window
     {
-        private WorkoutRepository repo;
-        private Workout wrkout;
+        //private WorkoutRepository repo;
+        //private Workout workout;
         public WorkoutForm()
+        //storage container variables here
         {
             InitializeComponent();
          }    
        
         private void AddWorkout_Click(object sender, RoutedEventArgs e)
         {
+           // new Workout(NewWorkoutTextbox.Text);
+           // NewWorkoutTextbox.Clear();
+            
             /*repo = new WorkoutRepository();
             string workout_date = Workout_Date.Text;
             string workout_name = Workout_Name.Text;

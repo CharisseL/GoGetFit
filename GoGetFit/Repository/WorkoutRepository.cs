@@ -98,11 +98,9 @@ namespace GoGetFit.Repository
             _dbContext.Dispose();
         }
 
-        internal List<Model.Workout> GetAllWorkouts()
+        public DbSet<Model.Workout> GetAllWorkouts()
         {
-            var query = from W in _dbContext.Workouts
-                        select W;
-            return query.ToList<Model.Workout>();
+            return _dbContext.Workouts;
         }
     }    
 }

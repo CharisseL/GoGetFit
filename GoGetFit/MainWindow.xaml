@@ -41,6 +41,12 @@
         <Button x:Name ="AddWorkoutButton" Content="Add Workout" HorizontalAlignment="Left" Margin="567,399,0,0" VerticalAlignment="Top" Width="90" Height="35" FontFamily="Segoe UI Black" Click="AddWorkoutButton_Click"/>
         <Label Content="  GoGetFit&#xD;&#xA;&#xD;&#xA;Month-At-A-Glance" HorizontalAlignment="Left" Height="68" Margin="4,24,0,0" VerticalAlignment="Top" Width="334" FontFamily="Segoe WP Black" FontSize="30"/>
         <Label Content="Month At-A-Glance" HorizontalAlignment="Left" Height="33" Margin="25,67,0,0" VerticalAlignment="Top" Width="233" FontSize="16"/>
-        <ListBox HorizontalAlignment="Left" Height="209" Margin="398,127,0,0" VerticalAlignment="Top" Width="255" Name="WorkoutList" ItemsSource="{Binding NotifyOnSourceUpdated=True}"/>
+        <ListBox HorizontalAlignment="Left" Height="209" Margin="398,127,0,0" VerticalAlignment="Top" Width="255" x:Name="WorkoutList" ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

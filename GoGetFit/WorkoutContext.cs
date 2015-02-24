@@ -12,6 +12,5 @@ namespace GoGetFit
     {
         public DbSet<Workout> Workouts { get; set; }
 
-        
     }
 }

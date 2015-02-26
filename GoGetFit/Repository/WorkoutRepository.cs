@@ -71,7 +71,6 @@ namespace GoGetFit.Repository
             return worklist.ToList<Model.Workout>();
         }
 
-
         public Model.Workout GetById(int id)
         {
             var query = from Workout in _dbContext.Workouts

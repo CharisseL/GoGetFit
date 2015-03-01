@@ -28,6 +28,8 @@ namespace GoGetFit
         //storage container variables here
         {
             InitializeComponent();
+            //repo = new WorkoutRepository();
+            
          }    
        
         private void AddWorkout_Click(object sender, RoutedEventArgs e)

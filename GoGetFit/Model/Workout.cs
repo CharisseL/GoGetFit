@@ -24,6 +24,11 @@ namespace GoGetFit.Model
            
         }
 
+        public Workout()
+        {
+
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

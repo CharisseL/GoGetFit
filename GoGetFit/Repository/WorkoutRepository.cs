@@ -15,7 +15,8 @@ namespace GoGetFit.Repository
         public WorkoutRepository()
         {
             _dbContext = new WorkoutContext();
-            _dbContext.Workouts.Load();
+            _dbContext.Workouts.LoadAsync();
+            //_dbContext.Workouts.Load();
 
         }
         

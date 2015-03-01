@@ -8,9 +8,14 @@ using GoGetFit.Model;
 
 namespace GoGetFit
 {
-    public class WorkoutContext : DbContext
+    public class WorkoutContext: DbContext
     {
         public DbSet<Workout> Workouts { get; set; }
+
+        public WorkoutContext()
+        {
+
+        }
 
     }
 }

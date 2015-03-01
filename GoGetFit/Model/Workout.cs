@@ -8,9 +8,9 @@ using System.ComponentModel;
 
 namespace GoGetFit.Model
 {
-    public class Workout //: INotifyPropertyChanged
+    public class Workout : INotifyPropertyChanged
     {
-        //public static ObservableCollection<Workout> Workouts = new ObservableCollection<Workout>();
+        public static ObservableCollection<Workout> Workouts = new ObservableCollection<Workout>();
         public int WorkoutId { get; set; }
         public string Date { get; set; }
         public string Name { get; set; }
@@ -25,6 +25,6 @@ namespace GoGetFit.Model
         }
 
 
-        //public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -32,8 +32,8 @@ namespace GoGetFit
        
         private void AddWorkout_Click(object sender, RoutedEventArgs e)
         {
-           // new Workout(NewWorkoutTextbox.Text);
-           // NewWorkoutTextbox.Clear();
+           //new Workout(NewWorkoutTextbox.Text);
+           //NewWorkoutTextbox.Clear();
             
             /*repo = new WorkoutRepository();
             string workout_date = Workout_Date.Text;
